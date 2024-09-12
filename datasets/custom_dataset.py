@@ -47,7 +47,8 @@ def build_custom_dataloader(cfg, training, distributed=True):
     if distributed:
         sampler = DistributedSampler(dataset)
     else:
-        sampler = RandomSampler(dataset)
+        # sampler = RandomSampler(dataset)
+        sampler = None
 
     data_loader = DataLoader(
         dataset,

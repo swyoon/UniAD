@@ -1,3 +1,18 @@
+
+How to run:
+
+```bash
+cd experiments/MVTec-AD
+bash extract_representation.sh
+```
+
+* data needs to be stored in `data/MVTec-AD/mvtec_anomaly_detection`.
+* The resulting file will be saved in `experiments/MVTec-AD/` as `train_data.pkl` and `val_data.pkl`.
+
+
+
+---
+
 # UniAD
 Official PyTorch Implementation of [A Unified Model for Multi-class Anomaly Detection](https://arxiv.org/abs/2206.03687), Accepted by NeurIPS 2022 Spotlight.
 
