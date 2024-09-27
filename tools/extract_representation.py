@@ -158,7 +158,8 @@ def save_data(
         # forward
         with torch.no_grad():
             outputs = model(input)
-        data_to_save = {k: outputs[k].cpu() if hasattr(outputs[k], 'cpu') else outputs[k] for k in ['mask', 'features', 'strides', 'feature_align',  'label', 'clsname']}
+        # data_to_save = {k: outputs[k].cpu() if hasattr(outputs[k], 'cpu') else outputs[k] for k in ['mask', 'features', 'strides', 'feature_align',  'label', 'clsname']}
+        data_to_save = {k: outputs[k].cpu() if hasattr(outputs[k], 'cpu') else outputs[k] for k in ['mask', 'feature_align',  'label', 'clsname']}
         l.append(data_to_save)
         continue
 
